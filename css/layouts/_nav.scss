@@ -1,0 +1,234 @@
+.navigation {
+    float: right;
+    margin: 17px 0;
+}
+
+.nav-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.nav-item-link {
+    display: block;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $de-york;
+        border-radius: 5px;
+        color: $white;
+    }
+}
+
+.nav-section-slide-text {
+    float: left;
+    width: 50%;
+    padding-right: 88px;
+}
+
+.nav-middle-section {
+    margin: 5% auto;
+    float: left;
+    width: 100%;
+    padding: 0 7%;
+}
+
+.nav-section-title {
+    display: block;
+    color: $white;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 52px;
+    height: 50%;
+    margin: 150px 0 50px 0;
+}
+
+.nav-section-paragraph {
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 400;
+    color: $white;
+}
+
+.nav-section-link {
+    margin-top: 40px;
+    display: block;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.nav-section-slide-image {
+    width: 50%;
+    margin: 50px auto;
+    float: left;
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    border: 30px solid $dove-gray;
+    margin: 0 auto;
+}
+
+.toggle {
+    display: none;
+}
+
+.show-nav {
+    display: block;
+}
+
+.hide-nav {
+    display: none;
+}
+
+@include breakpoint(1242px) {
+    .toggle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        border: 0;
+        background-color: transparent;
+    }
+
+    .toggle-open {
+        .toggle-line {
+            background-color: transparent;
+
+            &::before {
+                top: 0;
+                transform: rotate(-45deg)
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(45deg)
+            }
+        }
+    }
+
+    .toggle-line {
+        width: 40px;
+        height: 3px;
+        background-color: $white;
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 0;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 40px;
+            height: 3px;
+            background-color: $white;
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: -10px;
+        }
+
+        &::after {
+            top: 10px;
+        }
+
+    }
+
+    .nav-list {
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 42px;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+        background-color: $tundora;
+        float: none;
+        text-align: center;
+        padding-top: 20px;
+        border-bottom: 1px solid $black;
+        display: none;
+    }
+
+    .nav-item {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .nav-list {
+        padding: 20px 40px;
+        text-align: center;
+    }
+}
+
+.h1 {
+    display: none;
+}
+
+
+@include breakpoint(tablet) {
+    .nav-section-slide-text {
+        width: 40%;
+        padding: 0 20px;
+        padding-right: 20px;
+    }
+
+    .nav-section-title {
+        font-size: 33px;
+        line-height: 40px;
+    }
+
+    .nav-section-slide-image {
+        margin-top: 130px;
+        height: 60%;
+        width: 60%;
+    }
+}
+
+@include breakpoint(phone) {
+
+    .nav-middle-section {
+        height: auto;
+    }
+
+    .nav-section-slide-text {
+        width: 100%;
+        padding-right: none;
+        padding: 0 15px;
+    }
+
+    .nav-section-title {
+        font-size: 44px;
+        line-height: 46px;
+        padding: 0 24%
+    }
+
+    .nav-section-slide-image {
+        display: none;
+    }
+
+    .nav-section-paragraph {
+        padding: 0 15px;
+    }
+
+    .nav-section-link {
+        margin: 40px auto;
+    }
+}

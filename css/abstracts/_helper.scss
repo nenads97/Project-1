@@ -1,0 +1,44 @@
+.wrapper {
+    width: 100%;
+    max-width: 1360px;
+    padding: 0 20px;
+    /* ako dostigne max sirinu da se ne zalepi za ivice */
+    margin: 0 auto;
+    /* centriramo */
+}
+
+%clearfix {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+
+%bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+@mixin breakpoint($value) {
+    @if $value =='phone' {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @else if $value =='tablet' {
+        @media only screen and (min-width: 768px) and (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and (max-width: $value) {
+            @content;
+        }
+    }
+
+}

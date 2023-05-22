@@ -1,0 +1,71 @@
+.default-button {
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $white;
+    text-decoration: none;
+    background-color: $de-york;
+    border-radius: 5px;
+    width: 198px;
+}
+
+.body-button {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.footer-button {
+    padding: 10px 15px;
+    margin: 7px 0;
+    background-color: $de-york;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    color: $black;
+    line-height: 16px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+}
+
+.card-type1-link {
+    text-decoration: none;
+}
+
+.card-type2-link {
+    height: 100%;
+    display: block;
+    text-decoration: 0;
+    border: 5px solid $white;
+    padding-bottom: 65.59%;
+    position: relative;
+
+    &:hover {
+        border: 5px solid $de-york;
+    }
+}
+
+.body-link {
+    text-decoration: none;
+    color: $de-york;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.body-title-link-span {
+    opacity: 0.7;
+}
+
+@include breakpoint(phone) {
+    .footer-button {
+        display: block;
+    }
+}
